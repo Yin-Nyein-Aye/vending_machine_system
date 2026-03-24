@@ -1,0 +1,8 @@
+{
+    "require-dev": {
+        "phpunit/phpunit": "^10"
+    },
+    "require": {
+        "firebase/php-jwt": "^7.0"
+    }
+}

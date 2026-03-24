@@ -1,0 +1,629 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #4a90e2, #06115e);
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition:
+    color 0.3s ease,
+    border-bottom 0.3s ease;
+  padding-bottom: 2px;
+}
+
+nav ul li a:hover {
+  color: #ffdd57;
+  border-bottom: 2px solid #ffdd57;
+}
+
+.home-container {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  color: #0078d7;
+  margin-bottom: 1rem;
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Primary button */
+.btn-primary {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(90deg, #4a90e2, #0078d7);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #0078d7, #4a90e2);
+  transform: translateY(-2px);
+}
+
+/* Login container */
+.login-container {
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 1.5rem;
+  color: #0078d7;
+}
+
+/* Form styling */
+.login-form .form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #0078d7;
+  outline: none;
+}
+
+/* Button styling */
+.btn-primary {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(90deg, #4a90e2, #0078d7);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #0078d7, #4a90e2);
+  transform: translateY(-2px);
+}
+/* Register container */
+.register-container {
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.register-container h2 {
+  margin-bottom: 1.5rem;
+  color: #0078d7;
+}
+
+/* Form styling */
+.register-form .form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.register-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.register-form input:focus {
+  border-color: #0078d7;
+  outline: none;
+}
+
+.register-form ::placeholder,
+.login-form ::placeholder {
+  font-size: 12px;
+}
+
+/* Button styling (reuse from login) */
+.btn-primary {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(90deg, #4a90e2, #0078d7);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #0078d7, #4a90e2);
+  transform: translateY(-2px);
+}
+.error-message {
+  background: #ffe0e0;
+  color: #d8000c;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d8000c;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+}
+.page-title {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 28px;
+  color: #333;
+}
+
+.table-container {
+  width: 90%;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.products-table th,
+.products-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.products-table th {
+  background: #f4f4f4;
+  font-weight: bold;
+}
+
+.products-table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.btn-buy {
+  background: #28a745;
+  color: #fff;
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn-buy:hover {
+  background: #218838;
+}
+
+.pagination {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.page-link {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.page-link.active {
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.page-link:hover {
+  background: #0056b3;
+  color: #fff;
+}
+.page-title {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 26px;
+  color: #333;
+}
+
+.admin-actions {
+  text-align: right;
+  margin: 10px 145px;
+  display: inline-block;
+}
+
+.btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-edit {
+  background: #ffc107;
+  color: #000;
+  margin-right: 5px;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.products-table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+.products-table th,
+.products-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.products-table th {
+  background: #f4f4f4;
+}
+.page-title {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 26px;
+  color: #333;
+}
+
+.form-container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #2c3e50;
+  color: #fff;
+  padding: 20px;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 8px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 12px 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.sidebar ul li a:hover {
+  background: #34495e;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+.page-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 220px;
+  background: #2c3e50;
+  color: #fff;
+  padding: 20px;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 8px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 12px 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+  background: #34495e;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+.page-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.table-container {
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.products-table th,
+.products-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.products-table th {
+  background: #f4f4f4;
+}
+
+.btn-edit {
+  background: #ffc107;
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+  opacity: 0.9;
+}
+/* admin product edit  */
+.page-title {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 26px;
+  color: #333;
+}
+
+.form-container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+/* Faded row when out of stock */
+.out-of-stock {
+  opacity: 0.5;
+  background: #f9f9f9;
+}
+
+/* Disabled button style */
+.btn-disabled {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #ccc;
+  color: #666;
+  border-radius: 4px;
+  cursor: not-allowed;
+}
