@@ -9,11 +9,11 @@ class Database {
 
     public function __construct()
     {
-        $this->host = "mysql.railway.internal" ?: DB_HOST;
-        $this->port = 3306 ?: DB_PORT;
-        $this->username = 'root' ?: DB_USERNAME;
-        $this->password = 'lYuSFPabxXneFZAbEIOqngrOQTLiIuiV' ?: DB_PASSWORD;
-        $this->dbname = 'railway' ?: DB_NAME;
+        $this->host = getenv('MYSQLHOST') ?: "mysql.railway.internal";
+        $this->port = getenv('MYSQLPORT') ?: 3306;
+        $this->username = getenv('MYSQLUSER') ?: 'root';
+        $this->password = getenv('MYSQLPASSWORD') ?: 'lYuSFPabxXneFZAbEIOqngrOQTLiIuiV';
+        $this->dbname = getenv('MYSQLDATABASE') ?: 'railway';
 
         $this->host = getenv('MYSQLHOST') ?: "mysql.railway.internal";
         $this->port = getenv('MYSQLPORT') ?: 3306;
