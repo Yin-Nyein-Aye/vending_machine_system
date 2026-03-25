@@ -15,12 +15,6 @@ class Database {
         $this->password = getenv('MYSQLPASSWORD') ?: 'lYuSFPabxXneFZAbEIOqngrOQTLiIuiV';
         $this->dbname = getenv('MYSQLDATABASE') ?: 'railway';
 
-        $this->host = getenv('MYSQLHOST') ?: "mysql.railway.internal";
-        $this->port = getenv('MYSQLPORT') ?: 3306;
-        $this->username = getenv('MYSQLUSER') ?: 'root';
-        $this->password = getenv('MYSQLPASSWORD') ?: 'lYuSFPabxXneFZAbEIOqngrOQTLiIuiV';
-        $this->dbname = getenv('MYSQLDATABASE') ?: 'railway';
-
         if ($this->conn == null) {
             try {
                 $dsn = "mysql:host={$this->host};port={$this->port};dbname={$this->dbname};charset=utf8mb4";
