@@ -22,5 +22,4 @@ RUN composer install --no-dev --optimize-autoloader
 
 # Expose port 80
 EXPOSE 80
-
-apache2-foreground
+CMD ["apache2-foreground"]
