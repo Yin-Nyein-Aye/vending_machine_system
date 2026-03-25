@@ -1,4 +1,5 @@
 <?php
+echo "Hello from Railway!";
 $router = require_once __DIR__ . '/bootstrap/app.php';
 require_once __DIR__ . '/vendor/autoload.php'; 
 
